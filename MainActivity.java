@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<L
     private static final String ADDITIONAL_SEARCH_PARAMETERS = "&title&maxResults=20&orderBy=newest";
     private static final String SEARCH_PREFIX = "https://www.googleapis.com/books/v1/volumes?q=";
     // URL for Book data from the Google Books API dataset
-    public static String BOOKS_REQUEST_URL = "";
+    public String BOOKS_REQUEST_URL;
 
     private android.widget.SearchView searchText;
     //TextView displayed when list empty
@@ -92,9 +92,9 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<L
         if (networkInfo != null && networkInfo.isConnected()) {
             getLoaderManager().restartLoader(BOOK_LOADER_ID, null, MainActivity.this);
         } else {
-                //Update empty state with no connection error message
-                emptyStateTextView.setText(R.string.no_internet_connection);
-            }
+            //Update empty state with no connection error message
+            emptyStateTextView.setText(R.string.no_internet_connection);
+        }
 
     } //end of onButtonClick
 
