@@ -92,14 +92,10 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<L
         if (networkInfo != null && networkInfo.isConnected()) {
             getLoaderManager().restartLoader(BOOK_LOADER_ID, null, MainActivity.this);
         } else {
-            if (networkInfo.isConnected()) {
-                Log.i(LOG_TAG, "CONNECTION WORKS ");
-                getLoaderManager().initLoader(BOOK_LOADER_ID, null, MainActivity.this);
-            } else {
                 //Update empty state with no connection error message
                 emptyStateTextView.setText(R.string.no_internet_connection);
             }
-        }
+
     } //end of onButtonClick
 
     @Override
