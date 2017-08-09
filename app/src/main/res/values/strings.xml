@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <string name="app_name">Book Listing</string>
+    <!-- Text to display in the list when there are no books [CHAR LIMIT=NONE] -->
+    <string name="no_books">Input some search text in input box then click \'Press\' button</string>
+    <!-- Error message when there is no internet connectivity [CHAR LIMIT=NONE] -->
+    <string name="no_internet_connection">No internet connection</string>
+    <string name="title_placeholder_text">book title</string>
+    <string name="subtitle_placeholder_text">sub-title</string>
+    <string name="author_placeholder_text">author</string>
+    <string name="publication_date_placeholder_text">publication date</string>
+
+</resources>
